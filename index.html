@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo bing</title>
+    <script>
+        /* eslint-disable no-eval */
+        /* eslint-disable new-parens */
+        /* eslint-disable no-unneeded-ternary */
+        /* eslint-disable no-prototype-builtins */
+        /* eslint-disable quote-props */
+        /* eslint-disable prefer-rest-params */
+        /* eslint-disable no-restricted-syntax */
+        /* eslint-disable guard-for-in */
+        /* eslint-disable nonblock-statement-body-position */
+        /* eslint-disable block-scoped-var */
+        /* eslint-disable no-redeclare */
+        /* eslint-disable object-shorthand */
+        /* eslint-disable vars-on-top */
+        /* eslint-disable no-void */
+        /* eslint-disable no-unused-vars */
+        /* eslint-disable space-unary-ops */
+        /* eslint-disable no-nested-ternary */
+        /* eslint-disable eqeqeq */
+        /* eslint-disable no-undef */
+        /* eslint-disable indent */
+        /* eslint-disable no-return-assign */
+        /* eslint-disable func-names */
+        /* eslint-disable one-var */
+        /* eslint-disable prefer-template */
+        /* eslint-disable quotes */
+        /* eslint-disable no-bitwise */
+        /* eslint-disable semi */
+        /* eslint-disable prefer-arrow-callback */
+        /* eslint-disable curly */
+        /* eslint-disable no-cond-assign */
+        /* eslint-disable one-var-declaration-per-line */
+        /* eslint-disable no-sequences */
+        /* eslint-disable yoda */
+        /* eslint-disable space-before-function-paren */
+        /* eslint-disable wrap-iife */
+        /* eslint-disable camelcase */
+        /* eslint-disable no-unused-expressions */
+        /* eslint-disable no-var */
+        var _zbfpq = _zbfpq || [];
+        var cfg = {
+            debug: true,
+            filename: 'https://media.kurir.rs/banner/iimgg.jpg',
+            filename_poster: '',
+            filename_webm: '',
+            filename_ogv: '',
+            width: '100%',
+            height: '100',
+            headerHeight: '130',
+            clickTrack: 'https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjstmdDFc1ebmJqhg_yHS0rLhUTeDUM9wBCQ4PetgLSn54z5cKNYHhotX4J-KPstFl3aki8OwE_PdIc4PLg2H9ooMA-9iJ5tiYmWBpmrxqnWFusRcFc1hhLVvNqOFnlYGR8z4RmBIb3IcF1_49g7KY_PhzC5lXZM6Pd258R_BP2WLMrikFymrJn0hcW_KvOaomagI_oxK-3_COmT2XGhDBtuNf6N_UWuDlnzSFN4oJAHLJsHPb54o0UE&sig=Cg0ArKJSzL4y_CxRZHP6EAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://ad.doubleclick.net/ddm/trackclk/N6311.1987302ADRIAMEDIA/B31818828.391812918;dc_trk_aid=582991106;dc_trk_cid=212632861;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1',
+            impressor: ''
+        };
+        _zbfpq.push(cfg);
+
+
+        var top_doc = window && window.top ? window.top.document : document;
+        ! function(t, e) {
+            "undefined" != typeof module ? module.exports = e() : "function" == typeof define && "object" == typeof define.amd ? define(e) : this[t] = e()
+        }("domready", function() {
+            var t, e = [],
+                i = document,
+                n = "DOMContentLoaded",
+                o = /^loaded|^i|^c/.test(i.readyState);
+            return o || i.addEventListener(n, t = function() {
+                    for (i.removeEventListener(n, t), o = 1; t = e.shift();) t()
+                }),
+                function(t) {
+                    o ? t() : e.push(t)
+                }
+        }),
+        function(t) {
+            var e, i, n, o, s, r, a, l;
+            if (o = t.document, t.addEventListener && o.createEvent) return s = ["resize:end", "resizeend"].map(function(t) {
+                var e;
+                return e = o.createEvent("Event"), e.initEvent(t, !1, !1), e
+            }), n = function() {
+                return s.forEach(t.dispatchEvent.bind(t))
+            }, r = function() {
+                return Math.abs(+t.orientation || 0) % 180
+            }, a = r(), e = null, l = null, i = function() {
+                return e = r(), e !== a ? (n(), a = e) : (clearTimeout(l), l = setTimeout(n, 100))
+            }, t.addEventListener("resize", i, !1)
+        }(window),
+        function(context, doc) {
+            function guid_generator() {
+                var t = function() {
+                    return (65536 * (1 + Math.random()) | 0).toString(16).substring(1)
+                };
+                return t() + t() + "-" + t() + "-" + t() + "-" + t() + "-" + t() + t() + t()
+            }
+
+            function deep_css(t, e) {
+                var i, n, o = doc.defaultView || window;
+                return 1 == t.nodeType && (i = e.replace(/\-([a-z])/g, function(t, e) {
+                    return e.toUpperCase()
+                }), n = t.style[i], n || (t.currentStyle ? n = t.currentStyle[i] : o.getComputedStyle && (n = o.getComputedStyle(t, "").getPropertyValue(e)))), n || ""
+            }
+
+            function is_int(t) {
+                return "number" == typeof t && 0 === t % 1
+            }
+
+            function store_in_cache(t, e) {
+                ZBF.cache[t] = e
+            }
+
+            function ZBF_Pushdown(t) {
+                this.init(t);
+                console.log('xxxxxxxxxxxxxxxxxxxxxxxx', this);
+                document.addEventListener('off-route', () => {
+                    console.log('off route event uhvačen');
+                    this.remove();
+                    console.log('ZDF oćišćen');
+                });
+
+                document.addEventListener('page-ready', () => {
+                    console.log('page ready event uhvačen');
+                    this.init(t);
+                    console.log('ZDF postavljen');
+                });
+            }
+            if ("undefined" == typeof context["zbf-pushdown-loaded"]) {
+                var is_mobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+                    is_firefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1,
+                    has_console = "undefined" != typeof console,
+                    add_event = function(t, e, i) {
+                        null !== t && void 0 !== t && (t.addEventListener ? t.addEventListener(e, i, !1) : t.attachEvent ? t.attachEvent("on" + e, i) : t["on" + e] = i)
+                    },
+                    Utils = {
+                        gebtn: function(t) {
+                            return doc.getElementsByTagName(t) || null
+                        },
+                        gebi: function(t) {
+                            return doc.getElementById(t) || null
+                        },
+                        de: doc.documentElement,
+                        nodeName: function(t, e) {
+                            return t.nodeName && t.nodeName.toUpperCase() == e.toUpperCase()
+                        },
+                        is_empty: function(t) {
+                            return !t || 0 === t.length || !/[^\s]+/.test(t)
+                        },
+                        injectAsFirst: function(t) {
+                            t && doc.body && doc.body.firstChild && Utils.insertBefore(doc.body, doc.body.firstChild, t)
+                        },
+                        injectAsLast: function(t) {
+                            t && doc.body && doc.body.firstChild && Utils.insertBefore(doc.body, null, t)
+                        },
+                        createElement: function(t) {
+                            return doc.createElementNS ? doc.createElementNS("http://www.w3.org/1999/xhtml", t) : doc.createElement(t)
+                        },
+                        createFragment: function() {
+                            return doc.createDocumentFragment()
+                        },
+                        checkElement: function(t) {
+                            var e = [];
+                            t.constructor != Array && (t = [t]);
+                            for (var i = 0; i < t.length; i++)
+                                if (t[i].constructor == String) {
+                                    var n = this.createElement("div");
+                                    n.innerHTML = t[i];
+                                    for (var o = 0; o < n.childNodes.length; o++) e[e.length] = n.childNodes[o]
+                                } else if (t[i].length)
+                                for (var o = 0; o < t[i].length; o++) e[e.length] = t[i][o];
+                            else e[e.length] = t[i];
+                            return e
+                        },
+                        append: function(t, e) {
+                            for (var i = this.checkElement(e), n = this.createFragment(), o = 0; o <= i.length; o++) i[o] && n.appendChild(i[o]);
+                            t.appendChild(n)
+                        },
+                        insertBefore: function(t, e, i) {
+                            null === i && (i = e, e = t, t = e.parentNode);
+                            for (var n = this.checkElement(i), o = n.length - 1; o >= 0; o--) t.insertBefore(n[o], e)
+                        },
+                        remove: function(t) {
+                            t && t.parentNode.removeChild(t)
+                        },
+                        generate_iframe_html: function(t, e) {
+                            var i = "";
+                            return i += '<iframe src="' + e.src + "?clicktag=" + e.clicktag + "#clickTag=" + e.clicktag + '" width="' + e.width + '" height="' + e.height + '" style="width:' + e.width + "px; height:" + e.height + 'px; border:0; overflow:hidden;" frameborder="0" scrolling="no"></iframe>'
+                        },
+                        generate_video_html: function(t, e) {
+                            var i = "",
+                                n = 3,
+                                o = "";
+                            return Utils.is_empty(e.filename_poster) || (o = 'poster="' + e.filename_poster + '" '), i += "<video " + o + 'style="max-width:100%; max-height:100%; width:auto; height:auto;" id="' + t + '" class="pushdown-video" loop autoplay muted>', i += '<source src="' + e.filename + '" type="video/mp4">', Utils.is_empty(e.filename_webm) || (i += '<source src="' + e.filename_webm + '" type="video/webm">'), Utils.is_empty(e.filename_ogv) || (i += '<source src="' + e.filename_ogv + '" type="video/ogg">'), i += "</video>", i += '<div class="pushdown-video-controls" style="position:absolute; z-index:' + n + '; right:20px; top:50%; transform:translate(0,-50%);">', i += '<span id="' + e.playid + '" class="playing" style="display:block; width:46px;height:46px;border-radius:50%;border:3px solid #fff;cursor:pointer;background-repeat:no-repeat;background-position:50% 50%;background-image:' + this.get_pause_button() + '"></span>', i += '<span id="' + e.muteid + '" class="muted" style="display:block;width:46px;height:46px;border:3px solid #fff;border-radius:50%;margin-top:15px; cursor:pointer;background-repeat:no-repeat;background-position:50% 50%;background-size:20px;background-image:' + this.get_mute_button() + ';"></span>', i += "</div>"
+                        },
+                        base64_img: function(t) {
+                            var e = "url(data:image/png;base64," + t + ")";
+                            return e
+                        },
+                        get_mute_button: function() {
+                            var t = "iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAeFBMVEXAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+/v7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8E/JD3AAAAJ3RSTlMABAgMEBQYKDE9UWltcXV5fYKGio6SlpqeoqaqrrK2xs7S19/n8/shABvrAAAAwElEQVR42sXR2Q6CQBBE0QHBHXEBEUVRVOr//1AMwYogU7x5HycnnZ60+XPzInHbT5flD3gFsm+5AMpxF+7QkgGqJl3oHL7lCjVUMgShTa5BaJMbENrkFoQ2GcEKKaGg57uV1DAokY8qKeENQO5VUsEClAJSSkipIX8kIGcKSCkgpYaUmWuBUsYYKJ3p7N3ZLpmbDZXOabA8DpYprykkb61k0kAlzb6BcmZcw49MTV8RUPrc+Wl6W923nP8IzT97AY9wQ+QJfpqaAAAAAElFTkSuQmCC";
+                            return this.base64_img(t)
+                        },
+                        get_volume_button: function() {
+                            var t = "iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAApVBMVEXAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+/v7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9wYkG+AAAANnRSTlMABAgMEBQYHCAkKC05PUFJTVFVWV1hZWltcXV5fYqSlp6ipqqusra6vsLKztLb3+Pn6+/z9/toQ/9eAAABNklEQVR4Ac3U0VKyUBTF8QV+ih+WpmmmaCakklARdv7v/2hxkTOckTMx043r+jfDsM9eW1cUb5XNWrktlDonDJ0uBtBPRoYkaHR+Qh1GQDlpci9YsHsATHTpdtShL2lcAFGzO8PFKR1IQQbm3nYHLPgGXzPp3xFO/ZrrHLDh0gCPUlDAruZSsKFu38HcSSNgKHn/wyqDVyzoSVIvh6Ir7WEnxVxG0zKbSuqXsJZuwPREEzwCiS/NoexIOcya4dwAT5JfwERaw7YZKkjAhNIGNtIYMgeUd4SVNIVUGsCnC2oJsTSEXOqB+TN0f7rNz7jH47nH4x542yc8L0X661K0XjPn4i6aF1fy9zbM7Sq4y/VQ2uWyal2H8lx1rWTS7gBIXtzupFRy2+5IVfIZPpxnz5JRNtF15RvhRYfclNmkcQAAAABJRU5ErkJggg==";
+                            return this.base64_img(t)
+                        },
+                        get_pause_button: function() {
+                            var t = "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAHlBMVEX///////////////////////////////////////8V2MxSAAAACXRSTlMALjY3R0i1ttbnnfoXAAAAKklEQVR4AWOgFWBkYWFhAlGsrMxwQTZOTk4OKIUuyI5NkI2OgpQ7iUYAAOvcA6rBwhSKAAAAAElFTkSuQmCC";
+                            return this.base64_img(t)
+                        },
+                        get_play_button: function() {
+                            var t = "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNpi/P//PwM1AePIM5ABZCAWvA+IG4GYDYc8ToxL4tp/CLgPxL7UNBAGTgOxETUNhIFZQCxITQNB4BMQJ1HTwP/4wpcSA2GgihgDr9PThaAwTKZmLAuQE8vXaZUOSc4puAqHfUB8CIjbgfjnaHmIFwAEGAClRzWxp9EsoAAAAABJRU5ErkJggg==";
+                            return this.base64_img(t)
+                        },
+                        get_position: function(t) {
+                            for (var e = 0, i = 0; t;) e += t.offsetLeft - t.scrollLeft + t.clientLeft, i += t.offsetTop - t.scrollTop + t.clientTop, t = t.offsetParent;
+                            return {
+                                x: e,
+                                y: i
+                            }
+                        },
+                        generate_impressor: function(t) {
+                            var e = new Image(1, 1);
+                            return e.src = t, e
+                        },
+                        get_filename_ext: function(t) {
+                            if (t) return t.split(".").pop().toLowerCase()
+                        },
+                        strip_ext: function(t) {
+                            return t.substr(0, t.lastIndexOf("."))
+                        },
+                        basename: function(t, e) {
+                            return t.substr(t.lastIndexOf(e) + 1)
+                        },
+                        echo: function(t, e) {
+                            if (e) {
+                                var i = Utils.gebi(e);
+                                i && Utils.append(i, t)
+                            }
+                        },
+                        extend: function() {
+                            for (var t = 1; t < arguments.length; t++)
+                                for (var e in arguments[t]) arguments[t].hasOwnProperty(e) && (arguments[0][e] = arguments[t][e]);
+                            return arguments[0]
+                        },
+                        merge: function() {
+                            var t, e = {},
+                                i = 0,
+                                n = arguments.length;
+                            if (0 === n) return e;
+                            for (; i < n; i++)
+                                for (t in arguments[i]) arguments[i].hasOwnProperty(t) && (e[t] = arguments[i][t]);
+                            return e
+                        },
+                        build_inline_style_rules: function(t) {
+                            var e = [];
+                            for (var i in t) t.hasOwnProperty(i) && e.push(i + ":" + t[i]);
+                            return e = e.join(";")
+                        },
+                        window_scrolltop: function() {
+                            return window.pageYOffset || doc.documentElement.scrollTop || doc.body.scrollTop || 0
+                        },
+                        debounce: function(t, e, i) {
+                            var n;
+                            return function() {
+                                var o = this,
+                                    s = arguments,
+                                    r = function() {
+                                        n = null, i || t.apply(o, s)
+                                    },
+                                    a = i && !n;
+                                clearTimeout(n), n = setTimeout(r, e), a && t.apply(o, s)
+                            }
+                        },
+                        wait_for: function(test_fx, on_ready, timeout_ms) {
+                            var maxtimeout_ms = timeout_ms ? timeout_ms : 1e3,
+                                start = (new Date).getTime(),
+                                condition = !1,
+                                interval = setInterval(function() {
+                                    if ((new Date).getTime() - start < maxtimeout_ms && !condition) condition = "string" == typeof test_fx ? eval(test_fx) : test_fx();
+                                    else {
+                                        if (!condition) return !1;
+                                        "string" == typeof on_ready ? eval(on_ready) : on_ready(), clearInterval(interval)
+                                    }
+                                }, 250)
+                        },
+                        load_css: function(t) {
+                            if (t) {
+                                var e = doc.createElement("link");
+                                e.rel = "stylesheet", e.type = "text/css", e.href = t, e.media = "all", doc.getElementsByTagName("head")[0].appendChild(e)
+                            }
+                        },
+                        has_class: function(t, e) {
+                            return t.className.match(new RegExp("(\\s|^)" + e + "(\\s|$)"))
+                        },
+                        add_class: function(t, e) {
+                            Utils.has_class(t, e) || (t.className += " " + e)
+                        },
+                        remove_class: function(t, e) {
+                            var i = new RegExp("(\\s|^)" + e + "(\\s|$)");
+                            t.className = t.className.replace(i, " ")
+                        },
+                        str_replace_all: function(t, e, i) {
+                            return t.replace(new RegExp(Utils.escape_regexp(e), "g"), i)
+                        },
+                        escape_regexp: function(t) {
+                            return t.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1")
+                        },
+                        get_cursor_position: function(t, e) {
+                            var i = t.getBoundingClientRect(),
+                                n = e.clientX - i.left,
+                                o = e.clientY - i.top;
+                            return {
+                                x: n,
+                                y: o
+                            }
+                        },
+                        outer_width: function(t) {
+                            return "undefined" != typeof t.clip ? t.clip.width : t.style.pixelWidth ? t.style.pixelWidth : t.offsetWidth
+                        },
+                        outer_height: function(t) {
+                            return "undefined" != typeof t.clip ? t.clip.height : t.style.pixelHeight ? t.style.pixelHeight : t.offsetHeight
+                        },
+                        get_computed_styles: function(t) {
+                            var e, i, n, o = {};
+                            if (doc.defaultView && doc.defaultView.getComputedStyle)
+                                for (n = doc.defaultView.getComputedStyle(t), e = 0; n[e]; e++)(i = n.getPropertyValue(n[e])) && (o[n[e]] = i);
+                            else if (t.currentStyle)
+                                for (e in t.currentStyle)(i = element.currentStyle[e]) && (o[e] = i);
+                            return o
+                        },
+                        get_computed_style: function(t, e, i, n) {
+                            if (i = context.getComputedStyle, n = i ? i(t) : t.currentStyle) return n[e.replace(/-(\w)/gi, function(t, e) {
+                                return e.toUpperCase()
+                            })]
+                        }
+                    },
+                    ZBF = context.ZBF || {};
+                ZBF.cache = ZBF.cache || {}, ZBF.q = [], ZBF.q.push = function() {
+                    for (var t = 0, e = arguments.length; t < e; t++) {
+                        var i = new ZBF_Pushdown(arguments[t]);
+                        ZBF.q[ZBF.q.length] = i, store_in_cache(i.ident(), i)
+                    }
+                }, ZBF_Pushdown.prototype = {
+                    version: "0.1",
+                    debug: true,
+                    options: null
+                };
+                var defaults = {
+                    debug: true,
+                    id: "pushdown-v1",
+                    filename: null,
+                    filename_ogv: null,
+                    filename_webm: null,
+                    filename_poster: null,
+                    iframe: !1,
+                    video: !1,
+                    markup: null,
+                    pushSelector: "#site-wrapper,#main-header,.main-container,#sizer,#page,#wrap",
+                    headerSelector: ".header",
+                    css_url: "https://media.kurir.rs/banner/amz/js/backround.css",
+                    background: "#000",
+                    zindex: "0",
+                    width: 1920,
+                    height: 1080,
+                    duration: 0,
+                    delay: 0,
+                    clickTrack: null,
+                    clicktarget: "_blank",
+                    impressor: null
+                };
+                ZBF_Pushdown.prototype.init = function(t) {
+                    var e = this.ident(guid_generator());
+                    t.id = e, t.markupid = "pushdown-" + e, t.muteid = "mute-" + e, t.playid = "play-" + e, t.adunitid = t.markupid + "-ad", this.options = Utils.merge(defaults, t);
+                    var i = Utils.get_filename_ext(this.options.filename);
+                    if ("mp4" === i) {
+                        this.options.video = !0, this.options.filename_base = Utils.basename(this.options.filename, "/"), this.options.filename_path = this.options.filename.replace(this.options.filename_base, "");
+                        var n = Utils.strip_ext(this.options.filename_base);
+                        Utils.is_empty(this.options.filename_webm) && (this.options.filename_webm = this.options.filename_path + n + ".webm"), Utils.is_empty(this.options.filename_ogv) && (this.options.filename_ogv = this.options.filename_path + n + ".ogv"), Utils.is_empty(this.options.filename_poster) && (this.options.filename_poster = this.options.filename_path + n + "-poster.jpg")
+                    }
+                    if ("html" !== i && "htm" !== i || (this.options.iframe = !0), this.log("init():", this.options), this.debug = this.options.debug, Utils.is_empty(this.options.filename) && Utils.is_empty(this.options.markup)) return !1;
+                    this.vars = {
+                        viewportHeight: Utils.de.clientHeight,
+                        headerHeight: 61
+                    };
+                    var o = this.get_header_height_option();
+                    if (o) this.vars.headerHeight = o;
+                    else try {
+                        if (this.site_header = doc.querySelector(this.options.headerSelector), this.site_header) {
+                            var s = Utils.get_computed_style(this.site_header, "height");
+                            s && (this.vars.headerHeight = parseInt(s, 10) || 0)
+                        }
+                    } catch (t) {}
+                    this.vars.headerHeight = parseInt(this.vars.headerHeight, 10) || 0, this.vars.maxBannerHeight = this.vars.viewportHeight - this.vars.headerHeight, this.vars.ad_unit_height_int = this.vars.maxBannerHeight, this.log(this);
+                    try {
+                        this.site_wrapper = doc.querySelector(this.options.pushSelector), this.site_wrapper ? this.insert() : this.log("No site_wrapper found, not inserting")
+                    } catch (t) {
+                        this.log("Exception while detecting site_wrapper, bailing"), this.log(t)
+                    }
+                }, ZBF_Pushdown.prototype.get_header_height_option = function() {
+                    var t = null;
+                    if (this.options.headerHeight) {
+                        if ("function" == typeof this.options.headerHeight) {
+                            var e = this.options.headerHeight();
+                            e > 0 && (t = e)
+                        } else is_int(this.options.headerHeight) || (this.options.headerHeight = parseInt(this.options.headerHeight, 10) || 0), t = this.options.headerHeight;
+                        t = parseInt(t, 10) || 0
+                    }
+                    return t
+                }, ZBF_Pushdown.prototype.ident = function(t) {
+                    return "undefined" != typeof t && (this.id = t), this.id
+                }, ZBF_Pushdown.prototype.log = function() {
+                    var t = this.debug === !0 || this.options.debug === !0;
+                    if (!t) return !1;
+                    if ("undefined" != typeof console && console && console.log) {
+                        var e = Array.prototype.slice.call(arguments);
+                        e.unshift("[ZBF_Pushdown]"), Function.prototype.apply.call(console.log, console, e)
+                    }
+                }, ZBF_Pushdown.prototype.build_ad_unit_markup = function(t) {
+                    var e = "";
+                    return e += this.options.iframe ? Utils.generate_iframe_html(this.options.adunitid, this.options) : this.options.video ? Utils.generate_video_html(this.options.adunitid, this.options) : '<img id="' + this.options.adunitid + '" src="' + t + '" alt="" width="100%" height="100%" style="width:100%; height:100%; max-width:100%; max-height:100%; border:0;">', e += '<p style="z-index:3; line-height:1; text-align:center; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); cursor:default; color:#ccc; text-shadow:0 0 5px rgb(0,0,0);">spusti za sadrЕѕaj<br><span>&darr;</span></p>', e += '<a class="zbf-pushdown-link" style="position:absolute;left:0;right:0;top:0;bottom:0;z-index:2;" href="' + this.options.clickTrack + '" target="' + this.options.clicktarget + '"></a>'
+                }, ZBF_Pushdown.prototype.get_markup = function() {
+                    var t = null;
+                    return Utils.is_empty(this.options.markup) ? t = this.build_ad_unit_markup(this.options.filename) : (t = "", t += this.options.markup, t = t.replace("%adunitid%", this.options.adunitid), t = t.replace("%closeid%", this.options.closeid), t = t.replace("%filename%", this.options.filename), t = t.replace("%clicktrack%", this.options.clickTrack), t = Utils.str_replace_all(t, "%width%", this.options.width), t = Utils.str_replace_all(t, "%height%", this.options.height)), t
+                }, ZBF_Pushdown.prototype.insert = function() {
+                    this.log("insert(): begin");
+                    var t = this.options;
+                    t.css_url && Utils.load_css(t.css_url), this.site_wrapper && (this.site_wrapper.style.transition = "all 300ms", Utils.add_class(this.site_wrapper, "zbf-pushed-down"), this.site_wrapper.style.position = "relative", this.site_wrapper.style.zIndex = "100"), Utils.add_class(doc.body, "zbf-wallpaper-added zbf-pushdown-added");
+                    var e = {
+                            position: "fixed",
+                            "z-index": t.zindex,
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            background: t.background,
+                            visibility: "visible",
+                            "font-family": "sans-serif",
+                            "font-size": "24px",
+                            opacity: 0
+                        },
+                        i = this.get_markup(),
+                        n = '<div class="zbf-pushdown-wrap" id="' + t.markupid + '" style="' + Utils.build_inline_style_rules(e) + '"><div class="pushdown-contents" style="text-align:center;line-height:0;">' + i + "</div></div>";
+                    if (this.log("insert(): injecting pushdown markup"), Utils.injectAsLast(n), this.log("insert(): pushdown markup injected"), this.resize_stuff(), this.bind_window_resize(), this.delayed_show(), this.options.video) {
+                        this.bind_video_controls(), this.play_video();
+                        var o = this,
+                            s = this.get_dom_ad_unit();
+                        s.paused && this.pause_video(), add_event(s, "resize", function(t) {
+                            o.log("video resize callback fired"), o.resize_stuff()
+                        }), add_event(s, "loadeddata", function(t) {
+                            o.log("video loadeddata callback fired"), o.resize_stuff()
+                        }), add_event(s, "playing", function(t) {
+                            o.log("video playing callback fired"), o.play_video(), o.resize_stuff()
+                        })
+                    } else {
+                        var o = this;
+                        Utils.wait_for(function() {
+                            var t = Utils.get_computed_styles(o.get_dom_ad_unit()),
+                                e = t.height;
+                            return o.log("insert(): in wait_for test", e), "auto" !== e
+                        }, function() {
+                            o.log("insert(): wait_for returned true, moving on"), o.resize_stuff(), o.bind_window_resize()
+                        })
+                    }
+                    t.impressor && (this.log("insert(): generating impressor"), Utils.generate_impressor(t.impressor))
+                }, ZBF_Pushdown.prototype.pause_video = function() {
+                    var t = this.get_dom_ad_unit(),
+                        e = Utils.gebi(this.options.playid);
+                    Utils.remove_class(e, "playing"), t.pause(), e.style.backgroundImage = Utils.get_play_button()
+                }, ZBF_Pushdown.prototype.play_video = function() {
+                    var t = this.get_dom_ad_unit(),
+                        e = Utils.gebi(this.options.playid);
+                    Utils.add_class(e, "playing"), t.play(), e.style.backgroundImage = Utils.get_pause_button()
+                }, ZBF_Pushdown.prototype.mute_video = function() {
+                    var t = this.get_dom_ad_unit(),
+                        e = Utils.gebi(this.options.muteid);
+                    Utils.add_class(e, "muted"), t.muted = !0, e.style.backgroundImage = Utils.get_mute_button()
+                }, ZBF_Pushdown.prototype.unmute_video = function() {
+                    var t = this.get_dom_ad_unit(),
+                        e = Utils.gebi(this.options.muteid);
+                    Utils.remove_class(e, "muted"), t.muted = !1, e.style.backgroundImage = Utils.get_volume_button()
+                }, ZBF_Pushdown.prototype.bind_video_controls = function() {
+                    var t = Utils.gebi(this.options.playid),
+                        e = Utils.gebi(this.options.muteid),
+                        i = this;
+                    add_event(t, "click", function(e) {
+                        Utils.has_class(t, "playing") ? i.pause_video() : i.play_video()
+                    }), add_event(e, "click", function(t) {
+                        Utils.has_class(e, "muted") ? i.unmute_video() : i.mute_video()
+                    })
+                }, ZBF_Pushdown.prototype.get_dom_holder = function() {
+                    return Utils.gebi(this.options.markupid)
+                }, ZBF_Pushdown.prototype.get_dom_ad_unit = function() {
+                    return Utils.gebi(this.options.adunitid)
+                }, ZBF_Pushdown.prototype.hide = function() {
+                    var t = this.get_dom_holder();
+                    t ? (this.get_dom_ad_unit().style.opacity = "0", t.style.opacity = "0", t.style.display = "none", this.log("hide(): holder hidden")) : this.log("hide(): holder not found")
+                }, ZBF_Pushdown.prototype.show = function() {
+                    var t = this.get_dom_holder();
+                    t ? (t.style.display = "", t.style.opacity = "1", this.get_dom_ad_unit().style.opacity = "1", this.log("show(): div shown"), this.reset_duration_timer()) : this.log("show(): div not found")
+                }, ZBF_Pushdown.prototype.delayed_show = function() {
+                    var t, e = this.options,
+                        i = this;
+                    e.delay = parseInt(e.delay, 10), t = 0 === e.delay ? 10 : 1e3 * e.delay, this.log("delayed_show(): calling show() in " + t + "ms"), this.show_timer = setTimeout(function() {
+                        i.show(), i.resize_stuff()
+                    }, t)
+                }, ZBF_Pushdown.prototype.bind_window_resize = function() {
+                    var t = this;
+                    this.log('bind_window_resize(): binding "resize:end" callback'), add_event(window, "resize:end", function() {
+                        t.resize_stuff()
+                    })
+                }, ZBF_Pushdown.prototype.resize_stuff = function() {
+                    var t = Utils.gebi(this.options.adunitid);
+                    if (!t) return void this.log("resize_stuff(): ad unit NOT FOUND, bailing");
+                    this.vars.viewportHeight = Utils.de.clientHeight, this.vars.maxBannerHeight = this.vars.viewportHeight - this.vars.headerHeight;
+                    var e = Utils.get_computed_styles(t),
+                        i = e.height,
+                        n = e.width,
+                        o = parseInt(i, 10),
+                        s = parseInt(n, 10);
+                    if (this.log("resize_stuff():", s + " x " + o, this.vars.maxBannerHeight), "auto" !== i)
+                        if (o > this.vars.maxBannerHeight) o = this.vars.maxBannerHeight, t.style.width = "auto", t.style.height = this.vars.maxBannerHeight + "px";
+                        else {
+                            this.log("resize_stuff(): else case, actual ad_unit height <= maxBannerHeight", o, this.vars.maxBannerHeight), t.style.height = "auto";
+                            var r = Utils.get_computed_styles(t);
+                            o = parseInt(r.height, 10), this.log("resize_stuff(): else case, new ad_unit_height after auto resize", o), o >= this.vars.maxBannerHeight && (o = this.vars.maxBannerHeight, t.style.height = o + "px")
+                        } this.vars.ad_unit_height_int = o, this.set_site_wrapper_top(o)
+                }, ZBF_Pushdown.prototype.set_site_wrapper_top = function(t) {
+                    this.log("set_site_wrapper_top():", this.site_wrapper), this.site_wrapper && (is_int(t) || (t = parseInt(t, 10)), this.site_wrapper.style.top = t + "px")
+                }, ZBF_Pushdown.prototype.on_scroll = function() {
+                    if (!this.site_wrapper) return void this.log("on_scroll(): site_wrapper NOT FOUND, bailing");
+                    var t = Utils.gebi(this.options.adunitid);
+                    return t ? void 0 : void this.log("on_scroll(): ad unit NOT FOUND, bailing")
+                }, ZBF_Pushdown.prototype.reset_duration_timer = function() {
+                    var t = this,
+                        e = this.options;
+                    0 !== e.duration && "" !== e.duration && (this.log("reset_duration_timer(): calling finished() in " + 1e3 * e.duration + "ms"), this.duration_timer = setTimeout(function() {
+                        t.finished()
+                    }, 1e3 * e.duration))
+                }, ZBF_Pushdown.prototype.finished = function() {
+                    console.log('finished');
+                    this.remove()
+                }, ZBF_Pushdown.prototype.remove = function() {
+                    console.log('remove');
+                    var t = this.get_dom_holder();
+                    t ? (Utils.remove(t), Utils.remove_class(doc.body, "zbf-wallpaper-added zbf-pushdown-added"), this.site_wrapper && Utils.remove_class(this.site_wrapper, "zbf-pushed-down"), this.set_site_wrapper_top("0px"), clearTimeout(this.duration_timer), clearTimeout(this.show_timer), this.duration_timer = null, this.show_timer = null, this.log("remove(): objects removed")) : this.log("remove(): div not found!")
+                }, "undefined" != typeof context._zbfpq && domready(function() {
+                    for (; context._zbfpq.length > 0;) ZBF.q.push(context._zbfpq.shift());
+                    context._zbfpq.push = ZBF.q.push
+                })
+            }
+        }(this, top_doc), ! function(t) {
+            console.log('111111111');
+            t["zbf-pushdown-loaded"] = !0;
+            // console.log(typeof ZBF_Pushdown);
+        }(this);
+
+
+
+        // ////////////////////////////////////////////////////
+        // ////////////////////////////////////////////////////
+        // ////////////////////////////////////////////////////
+        // ////////////////////////////////////////////////////
+
+        // (function() {
+        //     var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true;
+        //     e.src = 'https://media.kurir.rs/banner/amz/js/zbf-pushdown.min5.js';
+        //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+        // })();
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // code...
+            const removeBtn = document.querySelector('.removeZBF');
+            removeBtn.addEventListener('click', function () {
+                console.log('remove clicked');
+                document.dispatchEvent(new CustomEvent('off-route'));
+            });
+
+            const makeBtn = document.querySelector('.setZBF');
+            makeBtn.addEventListener('click', function () {
+                console.log('make clicked');
+                document.dispatchEvent(new CustomEvent('page-ready'));
+            });
+        });
+
+    </script>
+
+    <style>
+        html, body {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+        }
+        h1 {
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
+        }
+        .header { background: #ffcc00; }
+
+        .light .main-container { background-color:#f0f0f0; }
+        .dark .main-container { background-color:#141010; }
+    </style>
+</head>
+<body>
+    <!-- Your content goes here -->
+    <div class="header">
+        <h1> Halo bing <a href="#" class="removeZBF">remove me</a> or <a href="#" class="setZBF">make me</a></h1>
+    </div>
+
+    <div class="main-container"></div>
+
+</body>
+</html>
